@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+      <link rel='stylesheet' href='/styles/bootstrap.min.css' />
+      <link rel='stylesheet' href='/styles/style.css' />
+      <script src="/js/jquery-2.2.0.min.js" type="text/javascript"></script>
+      <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+      <script src="/src/CustomerViewProduct.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap">
+      <style>
+        body {
+        background-color: #FFD1E3;
+        font-family: 'Abril Fatface, cursive'; /* Replace 'Your Font' with your preferred font-family */
+            color: #A367B1; /* Replace #333 with your preferred text color */
+            font-size: 18px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <nav class="navbar navbar-inverse" style="padding-left:130px;">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/dashboard">Home🏡</a></li>
+            <li><a href="/customer/cart/view">Cart</a></li>
+            <li><a href="/customer/order/view">Orders</a></li>
+            <li><a href="/">logout</a></li>
+          </ul>
+      </nav>
+    </div>
+    <div class="center">
+      <h1 style="font-family: Abril Fatface, cursive;">Product Details</h1>
+      <hr style="height: 2px; background-color: #A367B1;">
+    </div>
+    <br></br>
+    <br></br>
+     <div >
+  <form class="form-horizontal" style="width: 70%;">
+    <div class="form-group ">
+          <label for="name" class="col-sm-2 control-label" style="font-family: Abril Fatface, cursive; font-size: 18px; color: #A367B1;">Name: </label>
+          <div id="output-container" class="col-sm-2 control-label">
+            {{prod.name}}
+          </div>       
+    </div>
+      <div class="form-group">
+          <label for="quantity" class="col-sm-2 control-label" style="font-family: Abril Fatface, cursive; font-size: 18px; color: #A367B1;">Quantity</label>
+          <div id="output-container" class="col-sm-2 control-label">
+            {{prod.quantity}}
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="rating" class="col-sm-2 control-label" style="font-family: Abril Fatface, cursive; font-size: 18px; color: #A367B1;">Rating</label>
+          <div id="output-container" class="col-sm-2 control-label">
+            {{prod.rating}}
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="Category" class="col-sm-2 control-label" style="font-family: Abril Fatface, cursive; font-size: 18px; color: #A367B1;">Category</label>
+          <div id="output-container" class="col-sm-2 control-label">
+            {{prod.category}}
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="description" class="col-sm-2 control-label" style="font-family: Abril Fatface, cursive; font-size: 18px; color: #A367B1;">Description</label>
+          <div id="output-container" class="col-sm-2 control-label">
+            {{prod.description}}
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="description" class="col-sm-2 control-label" style="font-family: Abril Fatface, cursive; font-size: 18px; color: #A367B1;">Price</label>
+          <div id="output-container" class="col-sm-2 control-label">
+            {{prod.price}}
+          </div>
+      </div> 
+      <div class="form-group">
+          <label for="preferred quantity" class="col-sm-2 control-label" style="font-family: Abril Fatface, cursive; font-size: 18px; color: #A367B1;">Preferred quantity</label>
+          <div class="col-sm-10">
+              <input type="number" id="PreferredQuantity" name="PreferredQuantity" placeholder='' value="1" min="1" style="font-family: Abril Fatface, cursive; font-size: 18px; color: #A367B1;">
+          </div>
+      </div>
+      <div class="form-group" id="AddToCart">
+          <div class="col-sm-10 col-sm-offset-2">
+              <button id={{prod.id}} class="btn btn-success add" style="background-color: #5D3587; font-size:20px; font-family: Abril Fatface, cursive;" type="button">Add to cart</button>
+          </div>    
+      </div>
+  </form>
+    </div>
+  </body>
+</html>

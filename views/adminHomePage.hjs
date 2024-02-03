@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel='stylesheet' href='/styles/bootstrap.min.css' />
+      <link rel='stylesheet' href='/styles/style.css' />
+      <script src="/js/jquery-2.2.0.min.js" type="text/javascript"></script>
+      <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap">
+  <style>
+    body {
+background-color: #eddddc;
+
+    }
+    footer {
+      background-color: #b91a71  ; /* Darker blue or any color of your choice */
+      margin-top: 500px;
+      padding: 150px;
+      text-align: center;
+    }
+</style>
+  </head>
+  <body>
+    <div>
+      <nav class="navbar navbar-inverse" style="padding-left:130px;">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/dashboard">Home🏡</a></li>
+            <li><a href="/admin/product/add">Add</a></li>
+            <li><a href="/admin/product/view">Product</a></li>
+            <li><a href="/admin/product/hide">Hidden Products</a></li>
+
+            <li><a href="/">Logout</a></li>
+
+          </ul>
+      </nav>
+    </div>
+
+    <div class="center">
+        <h1 style="font-family: Abril Fatface, cursive; color: #b91a71;">Welcome Admin, {{ name }}!!!🦄✨</h1>
+    </div>
+  </body>
+  <footer></footer>
+</html>
+
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel='stylesheet' href='/styles/bootstrap.min.css' />
+      <link rel='stylesheet' href='/styles/style.css' />
+      <script src="/js/jquery-2.2.0.min.js" type="text/javascript"></script>
+      <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap">
+  <style>
+    body {
+background-color: #e3b2f8;
+
+    }
+    footer {
+      background-color: #fffeaa;; /* Darker blue or any color of your choice */
+      margin-top: 270px;
+      padding: 80px;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <div>
+      <nav class="navbar navbar-inverse" style="padding-left:130px;">
+          <ul class="nav navbar-nav">
+            <li><a href="/dashboard">Home🏡</a></li>
+            <li><a href="/customer/cart/view">Cart</a></li>
+            <li class="active"><a href="/customer/order/view">Orders</a></li>
+            <li><a href="/">logout</a></li>
+          </ul>
+      </nav>
+    </div>
+
+    <div class="center">
+      <h1 style="font-family: Abril Fatface, cursive; color: #fffeaa ; font-size:40px">Orders Page🧾</h1>
+    </div>
+
+    <div class="container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th class="text-center" style="font-family: Abril Fatface, cursive; font-size: 20px; color: #fffeaa ;">ID</th>
+            <th class="text-center" style="font-family: Abril Fatface, cursive; font-size: 20px; color: #fffeaa ;">Product Name</th>
+            <th class="text-center" style="font-family: Abril Fatface, cursive; font-size: 20px; color: #fffeaa ;">Quantity</th>
+          </tr>
+        </thead>
+
+        <tbody id="tbody">
+            {{#order}}
+            <tr>
+               <td class="text-center" style="font-family: Abril Fatface, cursive; font-size: 16px; color: #3a54bc ;">{{id}}</td>
+                <td class="text-center" style="font-family: Abril Fatface, cursive; font-size: 16px; color: #3a54bc ;">{{name}}</td>
+                <td class="text-center" style="font-family: Abril Fatface, cursive; font-size: 16px; color: #3a54bc ;">{{quantity}}</td>
+            </tr>
+            {{/order}}
+        </tbody>
+      </table>
+    </div>
+  </body>
+  <footer>                <p style="font-family: Abril Fatface, cursive; font-size: 60px;">🧁🧁🧁🧁🧁</p>
+</footer>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel='stylesheet' href='/styles/bootstrap.min.css' />
+      <link rel='stylesheet' href='/styles/style.css' />
+      <script src="/js/jquery-2.2.0.min.js" type="text/javascript"></script>
+      <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+      <script src="/src/AdminShowHidden.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap">
+  <style>
+    body {
+background-color: #edf2c1;
+
+    }
+    </style>
+  </head>
+  <body>
+    <div>
+      <nav class="navbar navbar-inverse" style="padding-left:130px;">
+          <ul class="nav navbar-nav">
+            <li ><a href="/dashboard">Home🏡</a></li>
+            <li><a href="/admin/product/add">Add</a></li>
+            <li><a href="/admin/product/view">Product</a></li>
+            <li class="active"><a href="/admin/product/hide">Hidden Products </a></li>
+            <li><a href="/">Logout</a></li>
+          </ul>
+      </nav>
+    </div>
+    <div class="center">
+      <h1 style="font-family: Abril Fatface, cursive; color: #bc1a42;">Hidden Products Page 🫥⚒️</h1>
+
+
+      
+    </div>
+    <div class="container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th class="text-center" style="font-family: Abril Fatface, cursive; font-size: 24px; color: #bc1a42;">Name</th>
+            <th class="text-center" style="font-family: Abril Fatface, cursive; font-size: 24px; color: #bc1a42;">Quantity</th>
+            <th class="text-center" style="font-family: Abril Fatface, cursive; font-size: 24px; color: #bc1a42;">Rating</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          {{#prod}}
+            <tr>
+               <td class="text-center" style="font-family: Abril Fatface, cursive; font-size: 20px; color: #dc4369;">{{name}}</td>
+                <td class="text-center" style="font-family: Abril Fatface, cursive; font-size: 20px; color: #dc4369;">{{quantity}}</td>
+                <td class="text-center" style="font-family: Abril Fatface, cursive; font-size: 20px; color: #dc4369;">{{rating}}</td>
+                <td class="text-center" style="font-family: Abril Fatface, cursive; font-size: 20px; color: #dc4369;">
+                    <button id={{id}} class="btn btn-info View" type="button" style="font-size:20px">Display Product</button>
+                </td>           
+            </tr>
+          {{/prod}}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
